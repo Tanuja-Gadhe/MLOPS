@@ -1,0 +1,26 @@
+10/03/2024
+
+MLOPS
+
+Machine Learning Lifecycle
+data      -> Data          -> feature     -> Model           -> Deployment
+collect      preprocessing    Engineering    Building/Testing
+
+-Tools
+  DVC - Data Version Control, MLflow- monitoring ,     
+
+Devops vs mlops
+- MLOPS -> model decaying -> change happens over time , no change in pipeline -> change in data over time 
+- model drifting -> sudden change in data ,
+  due to change in data (train on different data) - some changes in the feature , -> select new features
+
+
+after the model decays or drifts -> again goes in cycle -> select new features
+
+Devops -> only some features are added
+
+-Steps
+1 Ml Model
+2 Export
+3 flask app
+
