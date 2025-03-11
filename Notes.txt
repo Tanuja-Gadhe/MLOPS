@@ -1,0 +1,89 @@
+10/03/2024
+
+**MLOPS**
+
+* Machine Learning Lifecycle
+data      -> Data          -> feature     -> Model           -> Deployment
+collect      preprocessing    Engineering    Building/Testing
+
+-Tools
+  DVC - Data Version Control, MLflow- monitoring ,    
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+* Devops vs mlops
+- MLOPS -> model decaying -> change happens over time , no change in pipeline -> change in data over time 
+- model drifting -> sudden change in data ,
+  due to change in data (train on different data) - some changes in the feature , -> select new features
+
+
+after the model decays or drifts -> again goes in cycle -> select new features
+
+Devops -> only some features are added
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+* Steps
+1 Ml Model
+2 Export
+3 flask app
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+* Extracting a model
+- pickle
+
+  import pickle
+  with open("salary_predictor","wb") as file:
+    pickle.dump(lin,file)
+  
+- joblib 
+
+  import joblib
+  joblib.dump(model,file_name)
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+* loading extracted model 
+-  pickle
+
+  import pickle
+  with open("salary_predictor","rb") as file:
+    lin = pickle.load(file)
+  
+- joblib 
+
+  import joblib
+  model = joblib.load(file_name)
+
+lin.predict([[5.5]])
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+* Linear Regression :
+   y = mx + c
+   
+  m = slope
+  c = intercept
+
+- GridSearchCV
+  cv = cross validation
+  scoring = r2_score
+  n_job = -1 (use all the cores)
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+11/03/2024
+
+* Virtual Environments
+- all the packages will be available only in that environment or for a specific project
+- system can have other versions of pandas , but here it will select one which is installed in the env
+- to create venv : python -m venv name_of_venv
+- activate : cd venv -> Scripts\activate 
+- create a requirements.txt -> add all the dependencies
+- pip install -r requirements.txt
+
+* Classification 
+- Algorithms : Decision Tress , Logistic Regression , Random Forest , SVC (support vector classifier)
+- linearity in the data - Logistic Regression , SVC
+- Random data - Decision Tree , Random Forest
